@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>反混淆练习</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #normalBtn {
+      background-color: #3498db;
+    }
+
+    #detectBtn {
+      background-color: #2ecc71;
+    }
+
+    #professionalBtn {
+      background-color: #e74c3c;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #userAgentText {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 390px;
+      text-align: center;
+    }
+    #obfuscationBtn {
+      background-color: #9b59b6;
+    }
+	.button-container {
+    display: flex;
+    flex-direction: column;
+  }
+  </style>
+</head>
+<body>
+	<div class="button-container">
+  <button id="obfuscationBtn">混淆加固</button>
+  <div>
+  <button id="normalBtn">常规版</button>
+  <button id="detectBtn">检测版</button>
+  <button id="professionalBtn">专业版</button></div>
+  </div>
+  <script>
+    document.getElementById("obfuscationBtn").onclick = function() {
+      window.location.href = "https://m.ldvmp.com";
+    };
+    document.getElementById("normalBtn").onclick = function() {
+      window.location.href = "/mm1.html";
+    };
+    document.getElementById("detectBtn").onclick = function() {
+      window.location.href = "/mm2.html";
+    };
+    document.getElementById("professionalBtn").onclick = function() {
+      window.location.href = "/mm3.html";
+    };
+  </script>
+</body>
+</html>
