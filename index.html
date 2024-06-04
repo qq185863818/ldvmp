@@ -35,6 +35,9 @@
     #professionalBtn {
       background-color: #e74c3c;
     }
+	#checkTools {
+      background-color: #e66c3c;
+    }
 
     button:hover {
       background-color: #2980b9;
@@ -64,8 +67,11 @@
   <div>
   <button id="normalBtn">常规版</button>
   <button id="detectBtn">检测版</button>
-  <button id="professionalBtn">专业版</button></div>
+  <button id="professionalBtn">专业版</button>
   </div>
+  <button id="checkTools">开发者工具检测</button>
+  </div>
+  
   <script>
     document.getElementById("obfuscationBtn").onclick = function() {
       window.location.href = "https://m.ldvmp.com";
@@ -78,6 +84,9 @@
     };
     document.getElementById("professionalBtn").onclick = function() {
       window.location.href = "/mm3.html";
+    };
+	document.getElementById("checkTools").onclick = function() {
+      window.location.href = "/mm4.html";
     };
   </script>
 </body>
