@@ -33,10 +33,16 @@
     }
 
     #professionalBtn {
-      background-color: #e74c3c;
+      background-color: #e75c3c;
     }
 	#checkTools {
       background-color: #e66c3c;
+    }
+	#checkDP {
+      background-color: #e88c2c;
+    }
+	#checkPlugins {
+      background-color: #e35c6c;
     }
 
     button:hover {
@@ -70,6 +76,8 @@
   <button id="professionalBtn">专业版</button>
   </div>
   <button id="checkTools">开发者工具检测</button>
+  <button id="checkDP">DP检测</button>
+  <button id="checkPlugins">plugins检测</button>
   </div>
   
   <script>
@@ -87,6 +95,12 @@
     };
 	document.getElementById("checkTools").onclick = function() {
       window.location.href = "/mm4.html";
+    };
+	document.getElementById("checkDP").onclick = function() {
+      window.location.href = "/mm5.html";
+    };
+	document.getElementById("checkPlugins").onclick = function() {
+      window.location.href = "/mm6.html";
     };
   </script>
 </body>
