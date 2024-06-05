@@ -70,6 +70,7 @@
 	document.body.removeChild(iframe);
 	
 	if(!iframedefineProperty){
+	alert(666);
 	 iframedefineProperty = Object.defineProperty;
 	}
 	function getP(p,n){
@@ -105,6 +106,7 @@
 			alert(p1);
 			alert(plugin);
 			alert(navigator.plugins);
+			alert(navigator.plugins.length);
 			alert(navigator.appVersion);
 			return 3;
 		}else{
