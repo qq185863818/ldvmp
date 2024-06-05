@@ -101,6 +101,14 @@
 		let p1 = getP(plugin, i);
 		let j = i + parseInt((Math.random() * 18))+2;
 		let p2 = getP(plugin, j);
+		if(navigator.plugins.__proto__[Symbol.iterator] !== ([]).values){
+			console.log("被检测了");
+			return 5;
+		}
+		if(navigator.plugins && navigator.plugins.length===0){
+			console.log("通过");
+			return 1;
+		}
 		if(!(p1 === p2)){
 			console.log("被检测了");
 			alert(p1);
@@ -117,11 +125,6 @@
 				}
 			}
 		}
-		if(navigator.plugins.__proto__[Symbol.iterator] !== ([]).values){
-			console.log("被检测了");
-			return 5;
-		}
-		
 		navigator.plugins[0] = [];
 		if(navigator.plugins[0] !== plugin){
 			console.log("被检测了");
