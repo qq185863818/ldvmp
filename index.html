@@ -38,13 +38,18 @@
 	#checkTools {
       background-color: #e66c3c;
     }
+	  #checkTools2 {
+      background-color: #e95c2c;
+    }
 	#checkDP {
       background-color: #e88c2c;
     }
 	#checkPlugins {
       background-color: #e35c6c;
     }
-
+#checkPort {
+      background-color: #e66c6c;
+    }
     button:hover {
       background-color: #2980b9;
     }
@@ -76,8 +81,10 @@
   <button id="professionalBtn">专业版</button>
   </div>
   <button id="checkTools">开发者工具检测</button>
+  <button id="checkTools2">开发者工具检测2</button>
   <button id="checkDP">DP检测</button>
   <button id="checkPlugins">plugins检测</button>
+	<button id="checkPort">端口检测</button>		
   </div>
   
   <script>
@@ -101,6 +108,12 @@
     };
 	document.getElementById("checkPlugins").onclick = function() {
       window.location.href = "/mm6.html";
+    };
+	  document.getElementById("checkPort").onclick = function() {
+      window.location.href = "/mm7.html";
+    };
+	  document.getElementById("checkTools2").onclick = function() {
+      window.location.href = "/mm8.html";
     };
   </script>
 </body>
