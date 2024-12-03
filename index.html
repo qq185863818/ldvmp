@@ -50,6 +50,9 @@
 	#checkPlugins {
       background-color: #e35c6c;
     }
+	  #envCheck {
+      background-color: #66586c;
+    }
 #checkPort {
       background-color: #e66c6c;
     }
@@ -79,14 +82,15 @@
 	<div class="button-container">
   <button id="obfuscationBtn">混淆加固</button>
   <div>
-  <button id="normalBtn">常规版</button>
-  <button id="detectBtn">检测版</button>
-  <button id="professionalBtn">专业版</button>
+  <button id="normalBtn">常规控制流</button>
+  <button id="detectBtn">检测控制流</button>
+  <button id="professionalBtn">专业控制流</button>
   </div>
-<div>		
-  <button id="checkTools">控制台检测1</button>
-  <button id="checkTools2">控制台检测2</button>
-  <button id="checkTools3">控制台检测3</button>
+<div>
+  <button id="checkTools">控制台检测</button>
+  <button id="checkTools2">控制台检测</button>
+  <button id="checkTools3">控制台检测</button>
+  
 </div>
   <button id="checkDP">DP检测</button>
   <button id="checkPlugins">plugins检测</button>
@@ -119,13 +123,13 @@
 	  document.getElementById("checkPort").onclick = function() {
       window.location.href = "/mm7.html";
     };
-	  document.getElementById("checkTools2").onclick = function() {
+	  document.getElementById("checkTools3").onclick = function() {
       window.location.href = "/mm8.html";
     };
-	  document.getElementById("checkTools3").onclick = function() {
+	  document.getElementById("checkTools2").onclick = function() {
       window.location.href = "/mm9.html";
     };
-    document.getElementById("checkTools3").onclick = function() {
+    document.getElementById("envCheck").onclick = function() {
       window.location.href = "https://m.ldvmp.com/env";
     };  
   </script>
