@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>挖矿小游戏 - 关卡列表</title>
+  <style>
+    /* 基本样式 */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+    }
+
+    /* 关卡列表容器样式 */
+    .level-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 400px;
+    }
+
+    /* 标题样式 */
+    h2 {
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* 游戏说明样式 */
+    .game-description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* 关卡列表样式 */
+    .level-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .level-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .level-item:last-child {
+      border-bottom: none;
+    }
+
+    /* 关卡名称样式 */
+    .level-name {
+      font-size: 16px;
+      font-weight: bold;
+      color: #444;
+      flex: 1; /* 占据剩余空间 */
+      text-align: left;
+    }
+
+    /* 星级样式 */
+    .level-stars {
+      color: gold;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    /* 按钮样式 */
+    .start-button {
+      background-color: #6e8efb;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .start-button:hover {
+      background-color: #5b7cdb;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="level-container">
+    <h2>挖矿小游戏 - HOOK与反HOOK</h2>
+    <div class="game-description">JS HOOK与反HOOK练习</div>
+    <ul class="level-list">
+      <li class="level-item">
+        <span class="level-name">第一关：初始之地</span>
+        <div class="level-stars">★</div>
+        <button class="start-button" onclick="startLevel(1)">开始游戏</button>
+      </li>
+      <li class="level-item">
+        <span class="level-name">第二关：深邃矿洞</span>
+        <div class="level-stars">★★</div>
+        <button class="start-button" onclick="startLevel(2)">开始游戏</button>
+      </li>
+      <li class="level-item">
+        <span class="level-name">第三关：宝藏之心</span>
+        <div class="level-stars">★★★</div>
+        <button class="start-button" onclick="startLevel(3)">开始游戏</button>
+      </li>
+      <li class="level-item">
+        <span class="level-name">第四关：未知领域</span>
+        <div class="level-stars">★★★★</div>
+        <button class="start-button" onclick="startLevel(4)">开始游戏</button>
+      </li>
+      <li class="level-item">
+        <span class="level-name">第五关：秘境探险</span>
+        <div class="level-stars">★★★★★</div>
+        <button class="start-button" onclick="startLevel(5)">开始游戏</button>
+      </li>
+      <li class="level-item">
+        <span class="level-name">第六关：终极试炼</span>
+        <div class="level-stars">★★★★★★</div>
+        <button class="start-button" onclick="startLevel(6)">开始游戏</button>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function startLevel(level) {
+      // alert(`即将跳转至第 ${level} 关`);
+      // 替换 alert 逻辑为实际页面跳转
+	  window.open(`./level${level}.html`, '_blank');
+    }
+  </script>
+
+</body>
+</html>
