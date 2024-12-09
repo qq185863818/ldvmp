@@ -72,6 +72,9 @@
     #obfuscationBtn {
       background-color: #9b59b6;
     }
+	  #gameBtn {
+      background-color: #6b66b6;
+    }
 	.button-container {
     display: flex;
     flex-direction: column;
@@ -81,6 +84,7 @@
 <body>
 	<div class="button-container">
   <button id="obfuscationBtn">混淆加固</button>
+  <button id="gameBtn">挖矿小游戏-Hook对抗</button>
   <div>
   <button id="normalBtn">常规控制流</button>
   <button id="detectBtn">检测控制流</button>
@@ -102,6 +106,9 @@
     document.getElementById("obfuscationBtn").onclick = function() {
       window.location.href = "https://m.ldvmp.com";
     };
+    document.getElementById("gameBtn").onclick = function() {
+      window.location.href = "/game/index.html";;
+    }; 
     document.getElementById("normalBtn").onclick = function() {
       window.location.href = "/mm1.html";
     };
