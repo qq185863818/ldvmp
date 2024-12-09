@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初始之地(JS HOOK与反HOOK)</title>
+  <style>
+    /* 基本样式 */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+    }
+
+    /* 游戏容器样式 */
+    .game-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 300px;
+    }
+
+    /* 标题样式 */
+    h2 {
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    /* 游戏说明样式 */
+    .game-instructions {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.8;
+      text-align: left;
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 金币和次数显示样式 */
+    .stats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      margin: 20px 0;
+      font-weight: bold;
+      color: #444;
+    }
+
+    .stat-item {
+      margin: 0 10px;
+    }
+
+    /* 按钮样式 */
+    .game-button {
+      background-color: #6e8efb;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .game-button:hover {
+      background-color: #5b7cdb;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h2>初始之地（第一关）</h2>
+    <div class="game-instructions">
+      - 点击【开始挖矿】随机获得金币<br>
+      - 累计金币达到100即可通关<br>
+      - 点击【通关验证】检查是否成功<br>
+      - 在不改变原始JS代码的情况下<br>
+	  - 通过HOOK方式实现挖矿【1次】通关<br>
+    </div>
+    <div class="stats">
+      <div class="stat-item">当前金币：<span id="goldCount">0</span></div>
+      <div class="stat-item">挖矿次数：<span id="mineCount">0</span></div>
+    </div>
+    <button class="game-button" id="mineButton">开始挖矿</button>
+    <button class="game-button" id="testButton">通关验证</button>
+  </div>
+
+  <script>
+	debugger;
+	console.log("练习demo:","https://www.ldvmp.com");
+	console.log("喵喵盾JS混淆加固:","https://m.ldvmp.com");
+	
+	
+    let gold = 0; // 初始化金币
+    let mineCount = 0; // 初始化挖矿次数
+	
+    // 按钮元素
+    let goldCount = document.getElementById("goldCount");
+    let mineCountDisplay = document.getElementById("mineCount");
+    let mineButton = document.getElementById("mineButton");
+    let testButton = document.getElementById("testButton");
+
+    // 挖矿功能
+    mineButton.addEventListener("click", function(){
+      let minedGold = Math.random() * 10 + 1; // 随机增加1到10金币
+      gold += minedGold;
+      mineCount++;
+      goldCount.textContent = Math.floor(gold);
+      mineCountDisplay.textContent = mineCount;
+    });
+
+    // 测试功能
+    testButton.addEventListener("click", function(){
+      if (gold >= 100) {
+		if(mineCount < 10){
+			console.log("恭喜您，通关了！");
+			alert("恭喜您，通过HOOK方式通关了！");
+		}else{
+			console.log("恭喜您，通关了，请试试HOOK方式过关！");
+			alert(`恭喜您，通关了！请试试HOOK方式过关！挖矿总次数：${mineCount}`);
+		}
+      } else {
+		console.log("金币不够，请试试HOOK方式过关！");
+        alert("金币不够，请继续挖矿！");
+      }
+    });
+  </script>
+
+</body>
+</html>
