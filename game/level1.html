@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>初始之地(JS HOOK与反HOOK)</title>
+  <title>初始之地(JS HOOK对抗)</title>
   <style>
     /* 基本样式 */
     body {
@@ -100,13 +100,9 @@
 
   <script>
 	debugger;
-	console.log("练习demo:","https://www.ldvmp.com");
-	console.log("喵喵盾JS混淆加固:","https://m.ldvmp.com");
-	
-	
     let gold = 0; // 初始化金币
     let mineCount = 0; // 初始化挖矿次数
-	
+	let checkFlag = 1; // 检测标记
     // 按钮元素
     let goldCount = document.getElementById("goldCount");
     let mineCountDisplay = document.getElementById("mineCount");
@@ -115,11 +111,16 @@
 
     // 挖矿功能
     mineButton.addEventListener("click", function(){
+	  let start = Date.now();
       let minedGold = Math.random() * 10 + 1; // 随机增加1到10金币
       gold += minedGold;
       mineCount++;
       goldCount.textContent = Math.floor(gold);
       mineCountDisplay.textContent = mineCount;
+	  let end = Date.now();
+	  if(end - start > 999){
+		checkFlag = 0;
+	  }
     });
 
     // 测试功能
