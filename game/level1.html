@@ -115,6 +115,7 @@
     // 挖矿功能
     mineButton.addEventListener("click", function(){
 	  let start = Date.now();
+	  debugger;
       let minedGold = Math.random() * 10 + 1; // 随机增加1到10金币
       gold += minedGold;
       mineCount++;
@@ -128,8 +129,8 @@
 
     // 测试功能
     testButton.addEventListener("click", function(){
-      if (gold >= 100) {
-		if(mineCount < 10){
+      if (gold >= 100 && checkFlag) {
+		if(gold/mineCount > 10){
 			console.log("恭喜您，通关了！");
 			alert("恭喜您，通过HOOK方式通关了！");
 		}else{
@@ -137,8 +138,13 @@
 			alert(`恭喜您，通关了！请试试HOOK方式过关！挖矿总次数：${mineCount}`);
 		}
       } else {
-		console.log("金币不够，请试试HOOK方式过关！");
-        alert("金币不够，请继续挖矿！");
+		if(gold < 100){
+			console.log("金币不够，请试试HOOK方式过关！");
+			alert("金币不够，请继续挖矿！");
+		}else{
+			console.log("hook被检测到了噢，请继续加油！");
+			alert("检测到作弊，请继续加油！");
+		}
       }
     });
   </script>
