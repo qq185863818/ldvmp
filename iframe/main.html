@@ -1,1 +1,37 @@
-frame
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>跨域测试-主页面</title>
+  <style>
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>主页面</h1>
+  <button id="sendToIframe">验证跨域</button>
+  <iframe src="iframe.html" id="myIframe"  sandbox="allow-scripts allow-same-origin" style="display: none"></iframe>
+
+  <script>
+    const iframe = document.getElementById('myIframe');
+    const sendToIframeButton = document.getElementById('sendToIframe');
+    const iframeMessageSpan = document.getElementById('iframeMessage');
+
+    // 主页面向 iframe 发送消息
+    sendToIframeButton.addEventListener('click', () => {
+      const message = '验证跨域';
+      iframe.contentWindow.postMessage(message, '*');
+    });
+
+    // 接收来自 iframe 的消息
+    window.addEventListener('message', (event) => {
+      alert(event.data);
+    });
+  </script>
+</body>
+</html>
