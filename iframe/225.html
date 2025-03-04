@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://g.alicdn.com/AWSC/AWSC/awsc.js" charset="utf-8"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div id="nc" class="nc">
+
+        </div>
+
+    </div>
+</body>
+
+<script>
+    window.onload = function(){
+        AWSC.use("nc", function (state, module) {
+            window.nc = module.init({
+                appkey: "FFFF0N0000000000ACD7",
+                scene: "nc_login",
+                renderTo: "nc",
+                success: function (data) {
+                    console.log(data);
+                },
+                fail: function (failCode) {
+                },
+                error: function (errorCode) {
+                }
+            });
+        })
+    }
+
+</script>
+
+</html>
