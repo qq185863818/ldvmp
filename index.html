@@ -47,6 +47,9 @@
 	#checkDP {
       background-color: #e88c2c;
     }
+    #checkProxy {
+      background-color: #80e000;
+    }	  
 	#checkPlugins {
       background-color: #e35c6c;
     }
@@ -96,6 +99,7 @@
   <button id="checkTools3">控制台检测</button>
   
 </div>
+  <button id="checkProxy">JS代理对象检测(check ProxyObj)</button>
   <button id="checkDP">DP检测</button>
   <button id="checkPlugins">plugins检测</button>
   <button id="checkPort">端口检测</button>	
@@ -138,7 +142,10 @@
     };
     document.getElementById("envCheck").onclick = function() {
       window.location.href = "https://m.ldvmp.com/env";
-    };  
+    }; 
+    document.getElementById("checkProxy").onclick = function() {
+      window.location.href = "/checkJSProxy.html";
+    };
   </script>
 </body>
 </html>
