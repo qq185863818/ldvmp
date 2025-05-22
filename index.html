@@ -72,10 +72,13 @@
       width: 390px;
       text-align: center;
     }
+    #checkOpenDevTools {
+      background-color: #6815CD;
+    }
     #obfuscationBtn {
       background-color: #3399FF;
     }
-	  #gameBtn {
+    #gameBtn {
       background-color: #9080ED;
     }
 	.button-container {
@@ -99,6 +102,7 @@
   <button id="checkTools3">控制台检测</button>
   
 </div>
+  <button id="checkOpenDevTools">🎯 DevTools 检测仪表面板</button>	
   <button id="checkProxy">JS代理对象检测(check ProxyObj)</button>
   <button id="checkDP">DP检测</button>
   <button id="checkPlugins">plugins检测</button>
@@ -146,6 +150,9 @@
     document.getElementById("checkProxy").onclick = function() {
       window.location.href = "/checkjsproxy.html";
     };
+    document.getElementById("checkOpenDevTools").onclick = function() {
+      window.location.href = "/checkOpenDevTools.html";
+    };	  
   </script>
 </body>
 </html>
