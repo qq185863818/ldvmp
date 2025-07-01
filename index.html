@@ -49,7 +49,10 @@
     }
     #checkProxy {
       background-color: #80e000;
-    }	  
+    }
+    #perfTest {
+      background-color: #a5c9fd;
+    }	
 	#checkPlugins {
       background-color: #e35c6c;
     }
@@ -104,10 +107,11 @@
 </div>
   <button id="checkOpenDevTools">🎯 DevTools 检测仪表面板</button>	
   <button id="checkProxy">JS代理对象检测(check ProxyObj)</button>
+  <button id="perfTest">JS混淆代码性能测试</button>		
   <button id="checkDP">DP检测</button>
   <button id="checkPlugins">plugins检测</button>
   <button id="checkPort">端口检测</button>	
-  <button id="envCheck">环境校验</button>		
+  <button id="envCheck">环境校验</button>	
   </div>
   
   <script>
@@ -149,6 +153,9 @@
     }; 
     document.getElementById("checkProxy").onclick = function() {
       window.location.href = "/checkjsproxy.html";
+    };
+     document.getElementById("perfTest").onclick = function() {
+      window.location.href = "/perfTest.html";
     };
     document.getElementById("checkOpenDevTools").onclick = function() {
       window.location.href = "/checkOpenDevTools.html";
